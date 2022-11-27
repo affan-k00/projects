@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="styles_1.css">
+    <style> img {
+                border-radius: 7px;
+            }
+        img {
+            width: 60%;
+            height: 60%;
+        }
+        </style>
+        </head>
+        <body>
+            <h1>Affan's Ski Rental</h1>
+            <img src="Skiing2.jpeg" alt="Person skiing">
+            <h2>Client Information</h2>
+            <form id ="ClientInformation">
+                <p><label for="txtFirstName">First Name:</label>
+                    &nbsp;
+                    <input type="text" id="txtFirstName" maxlength="25"></p>
+                <p><label for="txtLastName">Last Name:</label>
+                    &nbsp;&nbsp;
+                    <input type="text" id="txtLastName" maxlength="25"></p>
+                <p><label for="txtHeight">Height:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" id="textHeight" maxlength="4"></p>
+                <p><label for="txtShoeSize">Shoe Size:</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" id="txtShoeSize" max length="2"></p>
+    
+                <p>
+                    <label for="selSkiLevel">What is your ski level&#x3f;</label>
+                    <p>     <select id="selSkiLevel">
+                            <option value="beg">Beginner</option>
+                            <option value="int">Intermediate</option>
+                            <option value="adv">Advanced</option>
+                        </select>
+                    </p>
+                    
+                <p><label>Would you like to rent a helmet? </label>
+                <p><label for="radYes10$dollar;">Yes &#x28;$10&#x29;</label>
+                    <input type="radio" name="RentHelmet" id="radyes10$dollar;" checked="checked"><br>
+                <p><label for="no;">No</label>
+                    <input type="radio" name="RentHelmet" id="no;"><br>
+                
+                <p><label>Check here to confirm that you have signed our rental waiver.</label>  
+                    <p><label for="chkagree;">Yes</label>
+                    <input type="checkbox" id="chkagree">
+                
+                <p><label for="txtarReferral">Special Requests&#x3f;</label>
+                    <p><textarea id="txtarReferral" cols="30" rows="3" maxlength="150"></textarea>
+                
+                <p><label>Would you like being added to our mailing list?</label>
+                <p><label for="chekMailingList;">Yes</label>
+                    <input type="checkbox" id="chekMailingList" checked="checked" >
+                
+                <p><label for="btnSubmit;">Submit my Rental Request</label>
+                    <input type="button" id="btnSubmit" value="submit">
+                </p>
+            </form>
+                <!--Written section comment-->
+                <p> it makes no sense to submit zip files .html.zip because there will be two 
+                    files that are enclosed within the zip itself. Your HTML files will be seperate 
+                    which should end in .html as well as your seperate external style sheet.</p>
+            </body>
+        </html>
+
+    

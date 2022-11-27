@@ -1,0 +1,11 @@
+h1 {
+     border-style:inset; 
+     width:3px;
+     color:#FF0000;
+    }
+
+body {
+    width:550px;
+    background-color:#d3d3d3;
+    }
+
