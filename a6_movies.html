@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta=charset="utf-8">
+    <title> Movies! </title>
+    <link rel="stylesheet" href="format_output_a6.css">
+    </head>
+
+    <body>
+    <h1> Movies! </h1>
+    <h2>Movie Information</h2>
+    <form id="movie information">
+        <label for="txtmovie">Movie Name:</label>
+         <input type="text" id="txtmovie"><br>
+        <label for="txtdirectorname">Director Name:</label>
+        <input type="text" id="txtdirectorName"><br>
+        <label for="txtyearmovie">Release Year:</label>
+        <input type="text" id="txtyearMovie"><br>
+        </form>
+        <img src="go_button.jpeg" width=150px height=150px onclick="movieoutput();">
+        
+        <div id="outputString" alt="buttonpic" class="main">
+        </div>
+        
+        <script>
+       function movieoutput()
+       //this should output the movie results 
+       {
+           var movie; var directorName; var yearofMovie; 
+           var outputstring; var yearofMovienow;
+
+           movie=document.getElementById("txtmovie").value;
+           directorName=document.getElementById("txtdirectorName").value;
+           yearofMovie=document.getElementById("txtyearMovie").value;
+           yearofMovie=parseInt(yearofMovie);
+           yearofMovienow=2021-yearofMovie;
+           
+           outputString="Movie Name: " +movie + ". Director Name: "+ directorName +". As of 2021, the movie is " 
+            +yearofMovienow +" years old" + "!";
+           document.getElementById("outputString").innerHTML=outputString;
+
+
+           }
+       </script>
+    
+
+</body>
+    </html>
