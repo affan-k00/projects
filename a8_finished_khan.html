@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <title>EITC Checker</title>
+    <body>
+    <header>
+        <h1>EITC Checker</h1>
+    </header>
+    <main>
+        <form id="EITC">
+            <label for="txtIc">How much investment income?</label>
+            <input type="text" id="txtIc"><br>
+
+            <br><label for="selsSN">Do you have a social security number</label>
+                <select id="selsSN">
+                    <option value="Yes">YES</option>
+                    <option value="No">NO</option>
+                    </select><br>
+
+            <br><label for="selRes">Are you a citizen or resident alien?</label>
+                    <select id="selRes">
+                    <option value="Yes">YES</option>
+                    <option value="No">NO</option>
+                    </select>
+                </form>
+                
+                <br><input type="button" value="Do I Qualify for the EITC" onclick="EITC();">
+                </main>
+                <div id="results">
+                </div>
+                <script>
+                        //this should output if they are elgible
+                        function EITC() 
+                            {
+                            var iC; var sSN; var cA; var iCout1; var iCout2;
+                            iC=document.getElementById("txtIc").value;
+                            sSN=document.getElementById("selsSN").value;
+                            res=document.getElementById("selRes").value;
+                            iC=parseFloat(iC);
+
+                            iCout1= "Income: " +iC + "<br> "+ "SSN Number? "+ sSN + 
+                            "<br> " + "Citizen/alien? "+ res + "<br> " + "<br> " +
+                            " You qualify for the EITC" + ". ";
+
+                           iCout2= "Income: " +iC + "<br> "+ "SSN Number? "+ sSN + 
+                            "<br> " + "Citizen/alien? "+ res + "<br> " + "<br> " +
+                            " You do not qualify for the EITC" + ". ";
+
+
+                            if (iC<="3649" && sSN=="Yes" && res=="Yes") 
+                            {
+                                document.getElementById("results").innerHTML=iCout1;
+                            } 
+                            else 
+                            {
+                                document.getElementById("results").innerHTML=iCout2;
+                            }
+
+                            
+                            }
+                </script>
+                </body>
+                </html>
+
+            
