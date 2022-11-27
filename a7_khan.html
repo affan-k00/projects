@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles_7.css">
+    <title>Affan's Hamburgers</title>
+    </head>
+    <body>
+        <header>
+        <h1>Affan's Hambugers: Online order</h1>
+        </header>
+        <main>
+    <form id="client information">
+        <label for="txtName">Name:</label>
+         <input type="text" id="txtName"><br>
+        <br><label for="txtPhoneNumber">Phone number:</label>
+        <input type="text" id="txtPhoneNumber"><br>
+        <br><label for="txtnumBurgers">Number of burgers ($4.50 each):</label>
+        <input type="text" id="txtnumBurgers"><br>
+        <br><label>Any condiments?</label><br> 
+        <label for="chkMustard;">Mustard</label>
+        <input type="checkbox" id="chkMustard"><br>
+        <label for="chkKetchup;">Ketchup</label>
+        <input type="checkbox" id="chkKetchup"><br>
+        <label for="chkPick;">Pickles</label>
+        <input type="checkbox" id="chkPick"><br>
+
+        <br><label for="selDayBorn">What day of the week were you born?</label>
+                <select id="selDayBorn">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+                </select><br>
+                </form>
+            
+                <input type="button" value="go"  onclick="order();">
+            
+            </main>
+            <div id="results" class="body"> 
+
+            </div>
+
+            <script>
+                //burger output should contain results of born on monday or not
+
+                function order() {
+                var Name; var numBurgers; 
+                var selDayBorn; var numBurgersnow;
+                 var numBurgersdisc;
+
+                Name=document.getElementById("txtName").value;
+                numBurgers=document.getElementById("txtnumBurgers").value;
+                selDayBorn=document.getElementById("selDayBorn").value;
+                numBurgers=parseInt(numBurgers);
+                numBurgersnow=numBurgers*4.50;
+                numBurgersdisc=numBurgers*4.50*.23;
+                    //can name variables more simple
+                numBurgers=numBurgers.toFixed(2);
+                numBurgersnow=numBurgersnow.toFixed(2);
+                numBurgersdisc=numBurgersdisc.toFixed(2);
+
+                resultsSpecial=" thank you " + Name + ", " + " for your order!"
+                + " You have requested "+ numBurgers +
+                "  burgers you qualify for the special discount because you were born on "+ 
+                selDayBorn + " your cost is: &#x24; " +numBurgersdisc + "! ";
+                    
+                resultsRegular=" thank you " + Name + ", " + " for your order!"
+                + " You have requested "+ numBurgers +
+                "  burgers you do not qualify for the special discount because you were born on "+ 
+                selDayBorn + " your cost is: &#x24; " +numBurgersnow + "! ";
+                
+              
+                
+                if ( selDayBorn == "Monday" )
+                {
+                    document.getElementById("results").innerHTML=resultsSpecial;
+                }
+                else 
+                {
+                    document.getElementById("results").innerHTML=resultsRegular;
+                    
+                }
+
+                
+                
+                }
+            
+                    </script> 
+
+
+
+    </body>
+    </html>
