@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta=charset="utf-8">
+    <title> Conversion to Calories</title>
+    </head>
+    <body>
+    <h1> conversion to Calories </h1>
+    <form id="conversiantable">
+    <p><label for="txtjoule">Enter Joules to get Calories:</label>
+        <input type="text" id="txtjoule">  
+        <input type="button" value="Convert to Calories" onclick="convertTocalories()">
+    </p></form>
+    
+    <div id="results" style="color:#FF0000;background-color:#008000;"></div>
+<script>
+function convertTocalories() {
+    var calories, joule;
+
+    joule= document.getElementById("txtjoule").value;
+    calories = joule*.239
+
+    document.getElementById("results").innerHTML = calories;
+    
+}
+</script>
+</body>
+</html>
