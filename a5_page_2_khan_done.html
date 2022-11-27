@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta=charset="utf-8">
+    <title> Multiply or subtract </title>
+    <link rel="stylesheet" href="styles_a_5.css">
+</head>
+<body>
+<img src="calc380.jpeg" alt="do math!">
+<header><h2>lets get calculated</h2></header>
+
+<main><h1> Plug in some calculations</h1></main>
+<form id="multiply">
+<p><label for="txtnumber1">Enter first number:</label>
+    <input type="text" id="txtnumber1">
+    
+    <label for="txtnumber2">Enter second number:</label>
+    <input type="text" id="txtnumber2">
+
+    <input type="button" value="Multiply" 
+    onclick="Multiply()">
+    <input type="button" value="subtract"
+    onclick="subtract()">
+</form>
+
+    <div id="results"></div>
+    <script>
+        function Multiply() {
+
+        var number1, number2;
+
+         number1= document.getElementById("txtnumber1").value;
+         number2= document.getElementById("txtnumber2").value;
+        document.getElementById("results").innerHTML=number1*number2;
+        }
+        function subtract() {
+            var number1, number2;
+            number1=document.getElementById("txtnumber1").value;
+            number2=document.getElementById("txtnumber2").value;
+            document.getElementById("results").innerHTML=number1-number2;
+        }
+
+
+
+
+
+    </script>
+    </body>
+    </html>
